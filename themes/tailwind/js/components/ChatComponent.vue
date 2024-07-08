@@ -1,38 +1,39 @@
 <template>
-    <div class="flex h-full">
-      <!-- Sidebar with User List -->
-      <div class="w-1/3 bg-gray-100 p-5 overflow-y-auto user-list-container">
-        <div
-          v-for="user in sortedUsers"
-          :key="user.id"
-          @click="selectUser(user)"
-          @mouseenter="hoveredUser = user.id"
-          @mouseleave="hoveredUser = null"
-          :class="[
-            'user-list-item flex items-center',
-            {
-              'bg-blue-500 text-black': selectedFriend && selectedFriend.id === user.id,
-              'bg-gray-300': hoveredUser === user.id && (!selectedFriend || selectedFriend.id !== user.id)
-            }
-          ]"
-        >
-          <img v-if="user.photo" :src="profileImagePath(user.photo)" alt="Profile Picture" class="w-10 h-10 rounded-full mr-2">
-          <div class="flex flex-col flex-grow">
-            <div class="flex items-center justify-between">
-              <div class="text-lg font-bold font-semibold">{{ user.name }}</div>
-              <div v-if="user.notification_count > 0" class="h-4 w-4 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
-                {{ user.notification_count }}
-              </div>
+  <div class="flex h-full">
+    <!-- Sidebar with User List -->
+    <div class="w-1/3 bg-gray-100 p-5 overflow-y-auto user-list-container">
+      <input type="text" v-model="searchQuery" @input="filterUsers" placeholder="Search users" class="w-full px-3 py-2 border rounded-lg mt-1 mb-1">
+      <div
+        v-for="user in filteredUsers"
+        :key="user.id"
+        @click="selectUser(user)"
+        @mouseenter="hoveredUser = user.id"
+        @mouseleave="hoveredUser = null"
+        :class="[
+          'user-list-item flex items-center',
+          {
+            'bg-blue-500 text-black': selectedFriend && selectedFriend.id === user.id,
+            'bg-gray-300': hoveredUser === user.id && (!selectedFriend || selectedFriend.id !== user.id)
+          }
+        ]"
+      >
+        <img v-if="user.photo" :src="profileImagePath(user.photo)" alt="Profile Picture" class="w-10 h-10 rounded-full mr-2">
+        <div class="flex flex-col flex-grow">
+          <div class="flex items-center justify-between">
+            <div class="text-lg font-bold font-semibold">{{ user.name }}</div>
+            <div v-if="user.notification_count > 0" class="h-4 w-4 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
+              {{ user.notification_count }}
             </div>
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <div class="text-ml text-black-300">{{ truncatedLatestMessage(user.latest_message) }}</div>
-              </div>
-              <div class="text-xs text-black-200">{{ user.latest_message && user.latest_message.formatted_time ? user.latest_message.formatted_time : '' }}</div>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <div class="text-ml text-black-300">{{ truncatedLatestMessage(user.latest_message) }}</div>
             </div>
+            <div class="text-xs text-black-200">{{ user.latest_message && user.latest_message.formatted_time ? user.latest_message.formatted_time : '' }}</div>
           </div>
         </div>
       </div>
+    </div>
       <!-- Chat Container -->
       <div class="flex flex-col w-2/3 h-full relative">
         <!-- Header with Friend's Name and Three Dots -->
@@ -59,7 +60,7 @@
         <!-- Messages Container -->
         <div class="flex-1 p-4 overflow-y-auto messages-container" ref="messagesContainer">
           <div v-for="(message, index) in messages" :key="message.id" class="message-container">
-            <div v-if="shouldDisplayDate(index)" class="text-center mb-2">
+            <div v-if="shouldDisplayDate(index)" class="text-center mb-2 mt-4">
               <span class="bg-gray-200 text-sm px-2 py-1 rounded">{{ formatDate(message.created_at) }}</span>
             </div>
             <div v-if="message.sender_id === currentUser.id" class="flex flex-col items-end mb-1">
@@ -120,7 +121,12 @@
   import axios from "axios";
   import { nextTick, onMounted, ref, watch, computed } from "vue";
   import { useRouter } from "vue-router";
-  import dayjs from "dayjs";
+  import dayjs from 'dayjs';
+  import isToday from 'dayjs/plugin/isToday';
+  import isYesterday from 'dayjs/plugin/isYesterday';
+  dayjs.extend(isToday);
+  dayjs.extend(isYesterday);
+
   import relativeTime from "dayjs/plugin/relativeTime";
   
   dayjs.extend(relativeTime);
@@ -144,6 +150,8 @@
   const router = useRouter();
   const MESSAGE_LIMIT = 18; 
   const hoveredUser =ref(null);
+  const searchQuery = ref('');
+  const filteredUsers = ref([]);
   
   const profileImagePath = (photo) => {
     return `/storage/${photo}`;
@@ -222,6 +230,8 @@
     }
   };
   
+
+
   const sendMessage = () => {
     if (newMessage.value.trim() !== "" && selectedFriend.value) {
       axios
@@ -392,6 +402,42 @@
     user.notification_count += 1;
   }
 };
+const filterUsers = () => {
+  const query = searchQuery.value.toLowerCase();
+
+  // Filter out users who do not have a latest_message or whose latest_message is "No messages yet"
+  let filtered = users.value.filter(user => user.latest_message && user.latest_message.content !== "No Messages Yet");
+
+  if (query.length >= 3) {
+    filtered = filtered.filter(user =>
+      user.name.toLowerCase().includes(query)
+    );
+  }
+
+  filtered.forEach(user => {
+    if (user.latest_message) {
+      const createdAt = dayjs(user.latest_message.created_at);
+      if (createdAt.isToday()) {
+        user.latest_message.formatted_time = createdAt.format('HH:mm');
+      } else {
+        user.latest_message.formatted_time = createdAt.format('ddd');
+      }
+    }
+  });
+
+  filteredUsers.value = [...filtered].sort((a, b) => {
+    if (a.latest_message && b.latest_message) {
+      return dayjs(b.latest_message.created_at).unix() - dayjs(a.latest_message.created_at).unix();
+    } else if (a.latest_message) {
+      return -1;
+    } else if (b.latest_message) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+};
+
 
   </script>
   
