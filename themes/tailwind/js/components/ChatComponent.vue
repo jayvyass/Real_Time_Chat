@@ -34,6 +34,7 @@
         </div>
       </div>
     </div>
+
       <!-- Chat Container -->
       <div class="flex flex-col w-2/3 h-full relative">
         <!-- Header with Friend's Name and Three Dots -->
@@ -230,8 +231,6 @@
     }
   };
   
-
-
   const sendMessage = () => {
     if (newMessage.value.trim() !== "" && selectedFriend.value) {
       axios
@@ -241,6 +240,8 @@
         .then((response) => {
           handleMessageSent(response.data);
           newMessage.value = "";
+          searchQuery.value = "";
+          filterUsers();
         });
     }
   };
@@ -330,21 +331,7 @@
     }
     return message ? message.text : "No messages yet";
   };
-  
-  const sortedUsers = computed(() => {
-    return [...users.value].sort((a, b) => {
-      if (a.latest_message && b.latest_message) {
-        return dayjs(b.latest_message.created_at).unix() - dayjs(a.latest_message.created_at).unix();
-      } else if (a.latest_message) {
-        return -1;
-      } else if (b.latest_message) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
-  });
-  
+    
   const isLastMessageSentByCurrentUser = (index) => {
     if (index === messages.value.length - 1) {
       // Check if the message at the current index is sent by the current user
@@ -401,31 +388,48 @@
   if (user && (!selectedFriend.value || user.id !== selectedFriend.value.id)) {
     user.notification_count += 1;
   }
+  filterUsers();
 };
+
 const filterUsers = () => {
-  const query = searchQuery.value.toLowerCase();
+  const query = searchQuery.value.toLowerCase(); // Ensure to access the value property if searchQuery is a ref or reactive object
 
-  // Filter out users who do not have a latest_message or whose latest_message is "No messages yet"
-  let filtered = users.value.filter(user => user.latest_message && user.latest_message.content !== "No Messages Yet");
+  // Filter users based on the search query and "No Messages Yet" condition
+  let filtered = users.value.filter(user => {
+    // Include all users when searching
+    if (query.length >= 3) {
+      return true;
+    } else if (query.length < 3){
+      return user.latest_message && user.latest_message.content !== "No Messages Yet";
+      // Exclude users with latest_message content "No Messages Yet" when not searching
+    } else{
+    return !(user.latest_message && user.latest_message.content === "No Messages Yet");
+    }
+  });
 
+  // If searching (query length >= 3), further filter users based on the query
   if (query.length >= 3) {
     filtered = filtered.filter(user =>
       user.name.toLowerCase().includes(query)
     );
   }
 
+  // Format the latest_message time
   filtered.forEach(user => {
     if (user.latest_message) {
       const createdAt = dayjs(user.latest_message.created_at);
       if (createdAt.isToday()) {
         user.latest_message.formatted_time = createdAt.format('HH:mm');
+      } else if (createdAt.isYesterday()) {
+        user.latest_message.formatted_time = 'Yesterday';
       } else {
         user.latest_message.formatted_time = createdAt.format('ddd');
       }
     }
   });
 
-  filteredUsers.value = [...filtered].sort((a, b) => {
+  // Sort users by latest message time in descending order
+  filtered.sort((a, b) => {
     if (a.latest_message && b.latest_message) {
       return dayjs(b.latest_message.created_at).unix() - dayjs(a.latest_message.created_at).unix();
     } else if (a.latest_message) {
@@ -436,12 +440,14 @@ const filterUsers = () => {
       return 0;
     }
   });
+
+  // Update filteredUsers with the sorted and filtered list
+  filteredUsers.value = filtered;
 };
 
-
-  </script>
+</script>
   
-  <style scoped>
+<style scoped>
   .flex {
     display: flex;
   }
@@ -488,12 +494,11 @@ const filterUsers = () => {
     background-color: #f0f2f5;
   }
   .user-list-item {
-    cursor: pointer;
-    padding: 0.75rem;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.2s ease;
-  }
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
   .user-list-item:hover {
     background-color: #3b82f6; /* bg-blue-500 */
   }
@@ -536,5 +541,5 @@ const filterUsers = () => {
   .bg-blue-500 {
     background-color: #3b82f6;
   }
-  </style>
+</style>
   

@@ -163,6 +163,7 @@ Route::middleware(['auth'])->group(function () {
         $message = ChatMessage::create([
             'sender_id' => auth()->id(),
             'receiver_id' => $friend->id,
+            'text'=> 'Chat Deleted',
             'status' => 'away'
         ]);
 
