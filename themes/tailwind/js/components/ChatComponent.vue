@@ -2,7 +2,7 @@
   <div class="flex h-full">
     <!-- Sidebar with User List -->
     <div class="w-1/3 bg-gray-100 p-5 overflow-y-auto user-list-container">
-      <input type="text" v-model="searchQuery" @input="filterUsers" placeholder="Search users" class="w-full px-3 py-2 border rounded-lg mt-1 mb-1">
+      <input type="text" v-model="searchQuery" @input="filterUsers" placeholder="Search users" class="w-full px-3 py-2 border rounded-lg mt-1 mb-4">
       <div
         v-for="user in filteredUsers"
         :key="user.id"
@@ -68,7 +68,10 @@
               <div v-if="shouldDisplayTime(index)" class="text-sm text-gray-400 mb-1">
                 {{ formatTime(message.created_at) }}
               </div>
-              <div class="p-2 text-white bg-blue-500 rounded-lg message whitespace-pre-wrap">
+              <div v-if="message.image" class="p-2">
+                <img :src="profileImagePath(message.image)" alt="Image" class="rounded-lg max-w-xs">
+              </div>
+              <div v-if="!message.image && message.text" class="p-2 text-white bg-blue-500 rounded-lg message whitespace-pre-wrap">
                 {{ message.text }}
               </div>
               <small v-if="isLastMessageSentByCurrentUser(index)" class="text-xs text-gray-400">{{ message.mstatus }}</small>
@@ -77,12 +80,15 @@
               <div v-if="shouldDisplayTime(index)" class="text-sm text-gray-400 mb-1">
                 {{ selectedFriend.name.split(' ')[0] }} at {{ formatTime(message.created_at) }}
               </div>
-              <div class="p-2 bg-gray-200 rounded-lg message whitespace-pre-wrap">
+              <div v-if="message.image" class="p-2">
+                <img :src="profileImagePath(message.image)" alt="Image" class="rounded-lg max-w-xs">
+              </div>
+              <div v-if="!message.image && message.text" class="p-2 bg-gray-200 rounded-lg message whitespace-pre-wrap">
                 <span v-html="formatMessage(message.text)"></span>
               </div>
             </div>
-          </div>
-  
+
+        </div>
           <small v-if="isFriendTyping" class="p-2 text-gray-700 typing-indicator">
             {{ selectedFriend ? selectedFriend.name : 'Friend' }} is typing...
           </small>
@@ -98,6 +104,10 @@
             placeholder="Type a message..."
             class="flex-1 px-2 py-2 border rounded-lg"
           ></textarea>
+          <input type="file" ref="imageInput" @change="uploadImage" class="hidden">
+          <button @click="triggerImageUpload" class="px-4 py-2 ml-2 text-white bg-blue-500 rounded-lg">
+            📷
+          </button> 
           <button @click="sendMessage" class="px-4 py-2 ml-2 text-white bg-blue-500 rounded-lg">
             Send
           </button>
@@ -153,7 +163,8 @@
   const hoveredUser =ref(null);
   const searchQuery = ref('');
   const filteredUsers = ref([]);
-  
+  const imageInput = ref(null); 
+
   const profileImagePath = (photo) => {
     return `/storage/${photo}`;
   };
@@ -321,16 +332,20 @@
       users.value[userIndex].latest_message.mstatus = 'seen';
     }
   };
-  
+
   const truncatedLatestMessage = (message) => {
     if (message && message.status === 'away') {
       return "No messages yet";
+    }
+    if (message && message.image) {
+      return "Image";
     }
     if (message && message.text.length > MESSAGE_LIMIT) {
       return message.text.slice(0, MESSAGE_LIMIT) + "...";
     }
     return message ? message.text : "No messages yet";
   };
+
     
   const isLastMessageSentByCurrentUser = (index) => {
     if (index === messages.value.length - 1) {
@@ -368,12 +383,14 @@
           messages.value = [];
           selectedFriend.value = null;
           showConfirmationModal.value = false;
+          filterUsers();
         })
         .catch(error => {
           console.error('Error deleting chat:', error);
           // Handle error appropriately
         });
-    }
+      }
+      
   };
   
   const resetNotificationCount = (userId) => {
@@ -418,15 +435,23 @@ const filterUsers = () => {
   filtered.forEach(user => {
     if (user.latest_message) {
       const createdAt = dayjs(user.latest_message.created_at);
+      const oneWeekAgo = dayjs().subtract(1, 'week');
+      const oneMonthAgo = dayjs().subtract(1, 'month');
+
       if (createdAt.isToday()) {
         user.latest_message.formatted_time = createdAt.format('HH:mm');
       } else if (createdAt.isYesterday()) {
-        user.latest_message.formatted_time = 'Yesterday';
-      } else {
         user.latest_message.formatted_time = createdAt.format('ddd');
+      } else if (createdAt.isAfter(oneWeekAgo)) {
+        user.latest_message.formatted_time = createdAt.format('DD/MM/YY');
+      } else if (createdAt.isAfter(oneMonthAgo)) {
+        user.latest_message.formatted_time = createdAt.format('ddd');
+      } else {
+        user.latest_message.formatted_time = createdAt.format('DD/MM/YY');
       }
     }
   });
+
 
   // Sort users by latest message time in descending order
   filtered.sort((a, b) => {
@@ -444,6 +469,33 @@ const filterUsers = () => {
   // Update filteredUsers with the sorted and filtered list
   filteredUsers.value = filtered;
 };
+
+const triggerImageUpload = () => {
+  if (imageInput.value) {
+    imageInput.value.click();
+  }
+  filterUsers();
+};
+
+const uploadImage = (event) => {
+  const file = event.target.files[0];
+  if (file && selectedFriend.value) {
+    const formData = new FormData();
+    formData.append("image", file);
+    axios.post(`/messages/${selectedFriend.value.id}/upload`, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data"
+      }
+    }).then((response) => {
+      handleMessageSent(response.data);
+      // Update user list after uploading image
+      filterUsers();
+    }).catch(error => {
+      console.error('Error uploading image:', error);
+    });
+  }
+};
+
 
 </script>
   

@@ -86,6 +86,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/messages/{friend}/upload', function (Request $request, User $friend) {
         $request->validate([
             'image' => 'required|image|max:2048',
+            'text' => 'nullable|string',
         ]);
 
         $path = $request->file('image')->store('chat_images', 'public');
