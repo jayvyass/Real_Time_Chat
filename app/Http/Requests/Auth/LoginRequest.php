@@ -28,10 +28,19 @@ class LoginRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        // Get the selected role from the request
+        $role = $this->input('role');
+
+        // Conditionally validate the password based on the role
+        $rules = [
             'email' => 'required|string|email',
-            'password' => 'required|string',
         ];
+
+        if ($role !== 'guest') {
+            $rules['password'] = 'required|string';
+        }
+
+        return $rules;
     }
 
     /**
@@ -45,15 +54,33 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        if (! Auth::attempt($this->only('email', 'password'), $this->filled('remember'))) {
-            RateLimiter::hit($this->throttleKey());
+        $role = $this->input('role');
 
+        // Skip password check if the role is 'guest'
+        if ($role === 'guest') {
+            $user = Auth::getProvider()->retrieveByCredentials(['email' => $this->input('email')]);
+
+            if ($user && $user->role === 'guest') {
+                Auth::login($user);
+                return;
+            }
+
+            // If user is not found or role is incorrect, fail authentication
             throw ValidationException::withMessages([
                 'email' => __('auth.failed'),
             ]);
-        }
+        } else {
+            // For non-guest roles, use the default password authentication
+            if (! Auth::attempt($this->only('email', 'password'), $this->filled('remember'))) {
+                RateLimiter::hit($this->throttleKey());
 
-        RateLimiter::clear($this->throttleKey());
+                throw ValidationException::withMessages([
+                    'email' => __('auth.failed'),
+                ]);
+            }
+
+            RateLimiter::clear($this->throttleKey());
+        }
     }
 
     /**

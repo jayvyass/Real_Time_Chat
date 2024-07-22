@@ -35,7 +35,6 @@
         </div>
 
         <div class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg">
-
             <!-- Session Status -->
             <?php if (isset($component)) { $__componentOriginal7c1bf3a9346f208f66ee83b06b607fb5 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal7c1bf3a9346f208f66ee83b06b607fb5 = $attributes; } ?>
@@ -80,42 +79,13 @@
 <?php unset($__componentOriginal0ff1ee8966084a5d418f848c5e125b44); ?>
 <?php endif; ?>
 
-            <form method="POST" action="<?php echo e(route('login')); ?>">
+            <div class="mb-4 text-sm text-gray-600">
+                <?php echo e(__('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.')); ?>
+
+            </div>
+
+            <form method="POST" action="<?php echo e(route('password.email')); ?>">
                 <?php echo csrf_field(); ?>
-
-                <!-- Role Dropdown -->
-                <div class="mt-4">
-                    <label class="block text-sm font-medium text-gray-700">
-                        <?php echo e(__('Role')); ?>
-
-                    </label>
-
-                    <select id="role" name="role" class="form-select w-full <?php $__errorArgs = ['role'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> border-red-500 <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" required>
-                        <option value="employee" <?php echo e(old('role') === 'employee' ? 'selected' : ''); ?>>Employee</option>
-                        <option value="guest" <?php echo e(old('role') === 'guest' ? 'selected' : ''); ?>>Guest</option>
-                    </select>
-
-                    <?php $__errorArgs = ['role'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                        <p class="mt-1 text-xs italic text-red-500">
-                            <?php echo e($message); ?>
-
-                        </p>
-                    <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                </div>
 
                 <!-- Email Address -->
                 <div class="mt-4">
@@ -150,97 +120,15 @@ endif;
 unset($__errorArgs, $__bag); ?>
                 </div>
 
-                <!-- Password -->
-                <div class="mt-4">
-                    <label class="block text-sm font-medium text-gray-700">
-                        <?php echo e(__('Password')); ?>
-
-                    </label>
-
-                    <input id="password" type="password"
-                            class="form-input w-full <?php $__errorArgs = ['password'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> border-red-500 <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?> password-field" name="password"
-                            required autocomplete="new-password">
-
-                    <?php $__errorArgs = ['password'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-                        <p class="mt-1 text-xs italic text-red-500">
-                            <?php echo e($message); ?>
-
-                        </p>
-                    <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-                </div>
-
-                <!-- Remember Me -->
-                <div class="block mt-4">
-                    <label for="remember_me" class="inline-flex items-center">
-                        <input id="remember_me" type="checkbox" class="text-indigo-600 border-gray-300 rounded shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                        <span class="ml-2 text-sm text-gray-600"><?php echo e(__('Remember me')); ?></span>
-                    </label>
-                </div>
-
                 <div class="flex items-center justify-end mt-4">
-                    <?php if(Route::has('password.request')): ?>
-                        <a class="text-sm text-gray-600 underline hover:text-gray-900" href="<?php echo e(route('password.request')); ?>">
-                            <?php echo e(__('Forgot your password?')); ?>
-
-                        </a>
-                    <?php endif; ?>
-
                     <button type="submit" class="inline-flex items-center px-4 py-2 ml-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-md hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25">
-                        <?php echo e(__('Log in')); ?>
+                        <?php echo e(__('Email Password Reset Link')); ?>
 
                     </button>
                 </div>
             </form>
         </div>
     </div>
-
-    <!-- JavaScript to handle role-based password field enabling/disabling -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const roleSelect = document.getElementById('role');
-            const passwordInput = document.getElementById('password');
-
-            function updatePasswordField() {
-                const selectedRole = roleSelect.value;
-                if (selectedRole === 'guest') {
-                    passwordInput.disabled = true;
-                    passwordInput.classList.add('disabled-input'); // Add CSS class when disabled
-                } else {
-                    passwordInput.disabled = false;
-                    passwordInput.classList.remove('disabled-input'); // Remove CSS class when enabled
-                }
-            }
-
-            // Initialize the password field state
-            updatePasswordField();
-
-            // Update the password field state when the role changes
-            roleSelect.addEventListener('change', updatePasswordField);
-        });
-    </script>
-
-    <!-- Styles for disabled password field -->
-    <style>
-        .disabled-input {
-            background-color: #f3f4f6; /* Light gray background */
-            color: #9ca3af; /* Gray text color */
-            cursor: not-allowed; /* Change cursor to indicate it's not editable */
-        }
-    </style>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal69dc84650370d1d4dc1b42d016d7226b)): ?>
@@ -250,5 +138,4 @@ unset($__errorArgs, $__bag); ?>
 <?php if (isset($__componentOriginal69dc84650370d1d4dc1b42d016d7226b)): ?>
 <?php $component = $__componentOriginal69dc84650370d1d4dc1b42d016d7226b; ?>
 <?php unset($__componentOriginal69dc84650370d1d4dc1b42d016d7226b); ?>
-<?php endif; ?>
-<?php /**PATH /home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/auth/login.blade.php ENDPATH**/ ?>
+<?php endif; ?><?php /**PATH /home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/auth/passwords/forget.blade.php ENDPATH**/ ?>

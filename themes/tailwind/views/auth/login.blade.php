@@ -17,6 +17,24 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
+                <!-- Role Dropdown -->
+                <div class="mt-4">
+                    <label class="block text-sm font-medium text-gray-700">
+                        {{ __('Role') }}
+                    </label>
+
+                    <select id="role" name="role" class="form-select w-full @error('role') border-red-500 @enderror" required>
+                        <option value="employee" {{ old('role') === 'employee' ? 'selected' : '' }}>Employee</option>
+                        <option value="guest" {{ old('role') === 'guest' ? 'selected' : '' }}>Guest</option>
+                    </select>
+
+                    @error('role')
+                        <p class="mt-1 text-xs italic text-red-500">
+                            {{ $message }}
+                        </p>
+                    @enderror
+                </div>
+
                 <!-- Email Address -->
                 <div class="mt-4">
                     <label class="block text-sm font-medium text-gray-700">
@@ -41,7 +59,7 @@
                     </label>
 
                     <input id="password" type="password"
-                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"
+                            class="form-input w-full @error('password') border-red-500 @enderror password-field" name="password"
                             required autocomplete="new-password">
 
                     @error('password')
@@ -73,4 +91,38 @@
             </form>
         </div>
     </div>
+
+    <!-- JavaScript to handle role-based password field enabling/disabling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const roleSelect = document.getElementById('role');
+            const passwordInput = document.getElementById('password');
+
+            function updatePasswordField() {
+                const selectedRole = roleSelect.value;
+                if (selectedRole === 'guest') {
+                    passwordInput.disabled = true;
+                    passwordInput.classList.add('disabled-input'); // Add CSS class when disabled
+                } else {
+                    passwordInput.disabled = false;
+                    passwordInput.classList.remove('disabled-input'); // Remove CSS class when enabled
+                }
+            }
+
+            // Initialize the password field state
+            updatePasswordField();
+
+            // Update the password field state when the role changes
+            roleSelect.addEventListener('change', updatePasswordField);
+        });
+    </script>
+
+    <!-- Styles for disabled password field -->
+    <style>
+        .disabled-input {
+            background-color: #f3f4f6; /* Light gray background */
+            color: #9ca3af; /* Gray text color */
+            cursor: not-allowed; /* Change cursor to indicate it's not editable */
+        }
+    </style>
 </x-guest-layout>

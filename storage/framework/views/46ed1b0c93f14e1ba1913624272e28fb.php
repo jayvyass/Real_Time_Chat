@@ -32,8 +32,8 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <a href="<?php echo e(route('dashboard')); ?>"
-                       class="<?php echo e(request()->routeIs('dashboard') ? 'border-indigo-400 text-gray-900 focus:border-indigo-700' : 'border-transparent hover:border-gray-300 focus:text-gray-700 focus:border-gray-300'); ?> inline-flex items-center px-1 pt-1 border-b-2 focus:outline-none">
-                        <?php echo e(__('Dashboard')); ?>
+                       class="<?php echo e(request()->routeIs('dashboard') ? 'border-indigo-400 text-gray-900 focus:border-indigo-700' : 'border-transparent hover:border-gray-300 focus:text-gray-700 focus:border-gray-300'); ?> inline-flex items-center px-1 pt-1 border-b-2 focus:outline-none text-xl font-bold">
+                        <?php echo e(__('Laravel Chat Application')); ?>
 
                     </a>
                 </div>
@@ -42,10 +42,9 @@
             <!-- Settings -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <?php if(auth()->guard()->check()): ?>
-                    <div><?php echo e(Auth::user()->name); ?></div>
-
+                    <div class="text-xl font-bold"><?php echo e(Auth::user()->name); ?></div>
                     <a href="<?php echo e(route('logout')); ?>"
-                        class="h-16 ml-4 border-transparent hover:border-gray-300 focus:text-gray-700 focus:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 focus:outline-none"
+                        class="text-xl font-bold h-16 ml-4 border-transparent hover:border-gray-300 focus:text-gray-700 focus:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 focus:outline-none"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         <?php echo e(__('Logout')); ?>

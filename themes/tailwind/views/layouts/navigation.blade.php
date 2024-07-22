@@ -13,8 +13,8 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <a href="{{ route('dashboard') }}"
-                       class="{{ request()->routeIs('dashboard') ? 'border-indigo-400 text-gray-900 focus:border-indigo-700' : 'border-transparent hover:border-gray-300 focus:text-gray-700 focus:border-gray-300' }} inline-flex items-center px-1 pt-1 border-b-2 focus:outline-none">
-                        {{ __('Dashboard') }}
+                       class="{{ request()->routeIs('dashboard') ? 'border-indigo-400 text-gray-900 focus:border-indigo-700' : 'border-transparent hover:border-gray-300 focus:text-gray-700 focus:border-gray-300' }} inline-flex items-center px-1 pt-1 border-b-2 focus:outline-none text-xl font-bold">
+                        {{ __('Laravel Chat Application') }}
                     </a>
                 </div>
             </div>
@@ -22,10 +22,9 @@
             <!-- Settings -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 @auth
-                    <div>{{ Auth::user()->name }}</div>
-
+                    <div class="text-xl font-bold">{{ Auth::user()->name }}</div>
                     <a href="{{ route('logout') }}"
-                        class="h-16 ml-4 border-transparent hover:border-gray-300 focus:text-gray-700 focus:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 focus:outline-none"
+                        class="text-xl font-bold h-16 ml-4 border-transparent hover:border-gray-300 focus:text-gray-700 focus:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 focus:outline-none"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}

@@ -59,6 +59,15 @@
 
             <form method="POST" action="<?php echo e(route('register')); ?>" enctype="multipart/form-data">
                 <?php echo csrf_field(); ?>
+                <!-- Role Selection -->
+                <div class="mb-4 text-center">
+                    <label for="role" class="block text-sm font-medium text-gray-700"><?php echo e(__('Who are you?')); ?></label>
+                    <select id="role" class="form-select w-full mt-1" name="role" onchange="handleRoleChange(this.value)">
+                        <option value="" selected disabled><?php echo e(__('Select your role')); ?></option>
+                        <option value="employee"><?php echo e(__('Employee')); ?></option>
+                        <option value="guest"><?php echo e(__('Guest')); ?></option>
+                    </select>
+                </div>
 
                 <!-- Name -->
                 <div>
@@ -123,7 +132,7 @@ $message = $__bag->first($__errorArgs[0]); ?> border-red-500 <?php unset($messag
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>" name="password"
-                        required autocomplete="new-password">
+                        required autocomplete="new-password" disabled class="deactivated">
 
                     <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -141,8 +150,8 @@ unset($__errorArgs, $__bag); ?>
                 <div class="mt-4">
                     <label for="password-confirm"
                         class="block text-sm font-medium text-gray-700"><?php echo e(__('Confirm Password')); ?></label>
-                    <input id="password-confirm" type="password" class="w-full form-input"
-                        name="password_confirmation" required autocomplete="new-password">
+                    <input id="password-confirm" type="password" class="w-full form-input deactivated"
+                        name="password_confirmation" required autocomplete="new-password" disabled>
                 </div>
 
                 <!-- Profile Picture -->
@@ -155,8 +164,8 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> border-red-500 <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>"
-                        name="photo" accept="image/*">
+unset($__errorArgs, $__bag); ?> deactivated"
+                        name="photo" accept="image/*" disabled>
 
                     <?php $__errorArgs = ['photo'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -183,6 +192,30 @@ unset($__errorArgs, $__bag); ?>
             </form>
         </div>
     </div>
+
+    <script>
+        function handleRoleChange(role) {
+            const isWorker = role === 'guest';
+            const fields = ['password', 'password-confirm', 'photo'];
+
+            fields.forEach(field => {
+                const input = document.getElementById(field);
+                input.disabled = isWorker;
+                input.classList.toggle('deactivated', isWorker);
+
+                if (isWorker) {
+                    input.value = '';
+                }
+            });
+        }
+    </script>
+    <style>
+        .deactivated {
+            background-color: #f3f3f3;
+            border-color: #d1d5db;
+            cursor: not-allowed;
+        }
+    </style>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal69dc84650370d1d4dc1b42d016d7226b)): ?>

@@ -12,6 +12,15 @@
 
             <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
+                <!-- Role Selection -->
+                <div class="mb-4 text-center">
+                    <label for="role" class="block text-sm font-medium text-gray-700">{{ __('Who are you?') }}</label>
+                    <select id="role" class="form-select w-full mt-1" name="role" onchange="handleRoleChange(this.value)">
+                        <option value="" selected disabled>{{ __('Select your role') }}</option>
+                        <option value="employee">{{ __('Employee') }}</option>
+                        <option value="guest">{{ __('Guest') }}</option>
+                    </select>
+                </div>
 
                 <!-- Name -->
                 <div>
@@ -41,7 +50,7 @@
                     <label for="password" class="block text-sm font-medium text-gray-700">{{ __('Password') }}</label>
                     <input id="password" type="password"
                         class="form-input w-full @error('password') border-red-500 @enderror" name="password"
-                        required autocomplete="new-password">
+                        required autocomplete="new-password" disabled class="deactivated">
 
                     @error('password')
                     <p class="mt-1 text-xs italic text-red-500">{{ $message }}</p>
@@ -52,15 +61,15 @@
                 <div class="mt-4">
                     <label for="password-confirm"
                         class="block text-sm font-medium text-gray-700">{{ __('Confirm Password') }}</label>
-                    <input id="password-confirm" type="password" class="w-full form-input"
-                        name="password_confirmation" required autocomplete="new-password">
+                    <input id="password-confirm" type="password" class="w-full form-input deactivated"
+                        name="password_confirmation" required autocomplete="new-password" disabled>
                 </div>
 
                 <!-- Profile Picture -->
                 <div class="mt-4">
                     <label for="photo" class="block text-sm font-medium text-gray-700">{{ __('Profile Picture') }}</label>
-                    <input id="photo" type="file" class="form-input w-full @error('photo') border-red-500 @enderror"
-                        name="photo" accept="image/*">
+                    <input id="photo" type="file" class="form-input w-full @error('photo') border-red-500 @enderror deactivated"
+                        name="photo" accept="image/*" disabled>
 
                     @error('photo')
                     <p class="mt-1 text-xs italic text-red-500">{{ $message }}</p>
@@ -79,4 +88,28 @@
             </form>
         </div>
     </div>
+
+    <script>
+        function handleRoleChange(role) {
+            const isWorker = role === 'guest';
+            const fields = ['password', 'password-confirm', 'photo'];
+
+            fields.forEach(field => {
+                const input = document.getElementById(field);
+                input.disabled = isWorker;
+                input.classList.toggle('deactivated', isWorker);
+
+                if (isWorker) {
+                    input.value = '';
+                }
+            });
+        }
+    </script>
+    <style>
+        .deactivated {
+            background-color: #f3f3f3;
+            border-color: #d1d5db;
+            cursor: not-allowed;
+        }
+    </style>
 </x-guest-layout>

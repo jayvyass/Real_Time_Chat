@@ -173,5 +173,14 @@ Route::middleware(['auth'])->group(function () {
         return response()->json(['status' => 'success']);
     });
 });
+Route::put('/messages/{friend}/{message}', function (User $friend, ChatMessage $message) {
+    $message->update([
+        'text' => request()->input('message'),
+    ]);
+
+    broadcast(new MessageSent($message))->toOthers();
+
+    return $message;
+});
 
 require __DIR__ . '/auth.php';
