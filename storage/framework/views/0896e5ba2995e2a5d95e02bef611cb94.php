@@ -80,7 +80,8 @@ $message = $__bag->first($__errorArgs[0]); ?> border-red-500 <?php unset($messag
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
-                        name="name" value="<?php echo e(old('name')); ?>" required autocomplete="name" autofocus>
+                        name="name" value="" required autocomplete="name">
+
 
                     <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -120,7 +121,7 @@ endif;
 unset($__errorArgs, $__bag); ?>
                 </div>
 
-                <!-- Password -->
+               <!-- Password -->
                 <div class="mt-4">
                     <label for="password" class="block text-sm font-medium text-gray-700"><?php echo e(__('Password')); ?></label>
                     <input id="password" type="password"
@@ -131,9 +132,8 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> border-red-500 <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="password"
-                        required autocomplete="new-password" disabled class="deactivated">
-
+unset($__errorArgs, $__bag); ?>"
+                        name="password" required autocomplete="new-password">
                     <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -148,10 +148,10 @@ unset($__errorArgs, $__bag); ?>
 
                 <!-- Confirm Password -->
                 <div class="mt-4">
-                    <label for="password-confirm"
-                        class="block text-sm font-medium text-gray-700"><?php echo e(__('Confirm Password')); ?></label>
-                    <input id="password-confirm" type="password" class="w-full form-input deactivated"
-                        name="password_confirmation" required autocomplete="new-password" disabled>
+                    <label for="password-confirm" class="block text-sm font-medium text-gray-700"><?php echo e(__('Confirm Password')); ?></label>
+                    <input id="password-confirm" type="password"
+                        class="w-full form-input"
+                        name="password_confirmation" required autocomplete="new-password">
                 </div>
 
                 <!-- Profile Picture -->
@@ -164,8 +164,8 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> border-red-500 <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?> deactivated"
-                        name="photo" accept="image/*" disabled>
+unset($__errorArgs, $__bag); ?>"
+                        name="photo" accept="image/*">
 
                     <?php $__errorArgs = ['photo'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -178,6 +178,7 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
                 </div>
+
                 
                 <div class="flex items-center justify-end mt-4">
                     <a href="<?php echo e(route('login')); ?>"
@@ -191,31 +192,7 @@ unset($__errorArgs, $__bag); ?>
                 </div>
             </form>
         </div>
-    </div>
-
-    <script>
-        function handleRoleChange(role) {
-            const isWorker = role === 'guest';
-            const fields = ['password', 'password-confirm', 'photo'];
-
-            fields.forEach(field => {
-                const input = document.getElementById(field);
-                input.disabled = isWorker;
-                input.classList.toggle('deactivated', isWorker);
-
-                if (isWorker) {
-                    input.value = '';
-                }
-            });
-        }
-    </script>
-    <style>
-        .deactivated {
-            background-color: #f3f3f3;
-            border-color: #d1d5db;
-            cursor: not-allowed;
-        }
-    </style>
+    </div>    
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__attributesOriginal69dc84650370d1d4dc1b42d016d7226b)): ?>

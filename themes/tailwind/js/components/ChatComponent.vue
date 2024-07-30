@@ -573,7 +573,7 @@ const uploadImage = (event) => {
     }).then((response) => {
       handleMessageSent(response.data);
       filterUsers();
-      
+            
     }).catch(error => {
       console.error('Error uploading image:', error);
     });

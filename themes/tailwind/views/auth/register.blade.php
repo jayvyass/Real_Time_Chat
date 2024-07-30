@@ -26,7 +26,8 @@
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700">{{ __('Name') }}</label>
                     <input id="name" type="text" class="form-input w-full @error('name') border-red-500 @enderror"
-                        name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        name="name" value="" required autocomplete="name">
+
 
                     @error('name')
                     <p class="mt-1 text-xs italic text-red-500">{{ $message }}</p>
@@ -45,13 +46,12 @@
                     @enderror
                 </div>
 
-                <!-- Password -->
+               <!-- Password -->
                 <div class="mt-4">
                     <label for="password" class="block text-sm font-medium text-gray-700">{{ __('Password') }}</label>
                     <input id="password" type="password"
-                        class="form-input w-full @error('password') border-red-500 @enderror" name="password"
-                        required autocomplete="new-password" disabled class="deactivated">
-
+                        class="form-input w-full @error('password') border-red-500 @enderror"
+                        name="password" required autocomplete="new-password">
                     @error('password')
                     <p class="mt-1 text-xs italic text-red-500">{{ $message }}</p>
                     @enderror
@@ -59,22 +59,23 @@
 
                 <!-- Confirm Password -->
                 <div class="mt-4">
-                    <label for="password-confirm"
-                        class="block text-sm font-medium text-gray-700">{{ __('Confirm Password') }}</label>
-                    <input id="password-confirm" type="password" class="w-full form-input deactivated"
-                        name="password_confirmation" required autocomplete="new-password" disabled>
+                    <label for="password-confirm" class="block text-sm font-medium text-gray-700">{{ __('Confirm Password') }}</label>
+                    <input id="password-confirm" type="password"
+                        class="w-full form-input"
+                        name="password_confirmation" required autocomplete="new-password">
                 </div>
 
                 <!-- Profile Picture -->
                 <div class="mt-4">
                     <label for="photo" class="block text-sm font-medium text-gray-700">{{ __('Profile Picture') }}</label>
-                    <input id="photo" type="file" class="form-input w-full @error('photo') border-red-500 @enderror deactivated"
-                        name="photo" accept="image/*" disabled>
+                    <input id="photo" type="file" class="form-input w-full @error('photo') border-red-500 @enderror"
+                        name="photo" accept="image/*">
 
                     @error('photo')
                     <p class="mt-1 text-xs italic text-red-500">{{ $message }}</p>
                     @enderror
                 </div>
+
                 
                 <div class="flex items-center justify-end mt-4">
                     <a href="{{ route('login') }}"
@@ -87,29 +88,5 @@
                 </div>
             </form>
         </div>
-    </div>
-
-    <script>
-        function handleRoleChange(role) {
-            const isWorker = role === 'guest';
-            const fields = ['password', 'password-confirm', 'photo'];
-
-            fields.forEach(field => {
-                const input = document.getElementById(field);
-                input.disabled = isWorker;
-                input.classList.toggle('deactivated', isWorker);
-
-                if (isWorker) {
-                    input.value = '';
-                }
-            });
-        }
-    </script>
-    <style>
-        .deactivated {
-            background-color: #f3f3f3;
-            border-color: #d1d5db;
-            cursor: not-allowed;
-        }
-    </style>
+    </div>    
 </x-guest-layout>

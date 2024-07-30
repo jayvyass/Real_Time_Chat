@@ -92,37 +92,5 @@
         </div>
     </div>
 
-    <!-- JavaScript to handle role-based password field enabling/disabling -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const roleSelect = document.getElementById('role');
-            const passwordInput = document.getElementById('password');
-
-            function updatePasswordField() {
-                const selectedRole = roleSelect.value;
-                if (selectedRole === 'guest') {
-                    passwordInput.disabled = true;
-                    passwordInput.classList.add('disabled-input'); // Add CSS class when disabled
-                } else {
-                    passwordInput.disabled = false;
-                    passwordInput.classList.remove('disabled-input'); // Remove CSS class when enabled
-                }
-            }
-
-            // Initialize the password field state
-            updatePasswordField();
-
-            // Update the password field state when the role changes
-            roleSelect.addEventListener('change', updatePasswordField);
-        });
-    </script>
-
-    <!-- Styles for disabled password field -->
-    <style>
-        .disabled-input {
-            background-color: #f3f4f6; /* Light gray background */
-            color: #9ca3af; /* Gray text color */
-            cursor: not-allowed; /* Change cursor to indicate it's not editable */
-        }
-    </style>
+    
 </x-guest-layout>

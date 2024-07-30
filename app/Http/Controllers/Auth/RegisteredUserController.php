@@ -32,6 +32,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        
         $role = $request->input ('role');
 
         $request->validate([
