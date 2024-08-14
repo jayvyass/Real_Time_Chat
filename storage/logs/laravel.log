@@ -5006,3 +5006,694 @@
 #31 /home/jay/Downloads/laravel/chatApplication/artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #32 {main}
 "} 
+[2024-08-01 09:06:57] local.ERROR: Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json {"view":{"view":"/home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/layouts/guest.blade.php","data":[]},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json at /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:727)
+[stacktrace]
+#0 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(292): Illuminate\\Foundation\\Vite->manifest()
+#1 /home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/layouts/guest.blade.php(13): Illuminate\\Foundation\\Vite->__invoke()
+#2 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#3 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire()
+#5 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#6 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#7 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#8 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#9 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(99): Illuminate\\View\\View->render()
+#10 /home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/auth/register.blade.php(86): Illuminate\\View\\Factory->renderComponent()
+#11 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#12 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#13 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire()
+#14 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#15 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#16 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#17 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#18 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(70): Illuminate\\View\\View->render()
+#19 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent()
+#20 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(920): Illuminate\\Http\\Response->__construct()
+#21 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(887): Illuminate\\Routing\\Router::toResponse()
+#22 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Routing\\Router->prepareResponse()
+#23 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#24 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(35): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Auth\\Middleware\\RedirectIfAuthenticated->handle()
+#26 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#28 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#29 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#30 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#31 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#32 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#33 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#34 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle()
+#35 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#37 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#39 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#41 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#42 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#43 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#44 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#45 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#46 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#47 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#48 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#49 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#51 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#52 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#53 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#54 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#55 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#56 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#57 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#58 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#59 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#60 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#61 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#62 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#63 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1188): Illuminate\\Foundation\\Http\\Kernel->handle()
+#64 /home/jay/Downloads/laravel/chatApplication/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#65 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#66 {main}
+
+[previous exception] [object] (Illuminate\\Foundation\\ViteManifestNotFoundException(code: 0): Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json at /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:727)
+[stacktrace]
+#0 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(292): Illuminate\\Foundation\\Vite->manifest()
+#1 /home/jay/Downloads/laravel/chatApplication/storage/framework/views/6d0d0296496f24d3e8ce61b31afe13d6.php(13): Illuminate\\Foundation\\Vite->__invoke()
+#2 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#3 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire()
+#5 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#6 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#7 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#8 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#9 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(99): Illuminate\\View\\View->render()
+#10 /home/jay/Downloads/laravel/chatApplication/storage/framework/views/0896e5ba2995e2a5d95e02bef611cb94.php(196): Illuminate\\View\\Factory->renderComponent()
+#11 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#12 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#13 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire()
+#14 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#15 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#16 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#17 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#18 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(70): Illuminate\\View\\View->render()
+#19 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent()
+#20 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(920): Illuminate\\Http\\Response->__construct()
+#21 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(887): Illuminate\\Routing\\Router::toResponse()
+#22 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Routing\\Router->prepareResponse()
+#23 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#24 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(35): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Auth\\Middleware\\RedirectIfAuthenticated->handle()
+#26 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#28 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#29 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#30 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#31 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#32 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#33 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#34 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle()
+#35 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#37 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#39 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#41 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#42 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#43 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#44 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#45 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#46 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#47 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#48 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#49 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#51 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#52 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#53 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#54 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#55 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#56 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#57 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#58 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#59 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#60 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#61 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#62 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#63 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1188): Illuminate\\Foundation\\Http\\Kernel->handle()
+#64 /home/jay/Downloads/laravel/chatApplication/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#65 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#66 {main}
+"} 
+[2024-08-01 09:07:10] local.ERROR: Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json {"view":{"view":"/home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/layouts/guest.blade.php","data":[]},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json at /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:727)
+[stacktrace]
+#0 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(292): Illuminate\\Foundation\\Vite->manifest()
+#1 /home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/layouts/guest.blade.php(13): Illuminate\\Foundation\\Vite->__invoke()
+#2 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#3 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire()
+#5 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#6 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#7 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#8 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#9 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(99): Illuminate\\View\\View->render()
+#10 /home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/auth/register.blade.php(86): Illuminate\\View\\Factory->renderComponent()
+#11 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#12 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#13 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire()
+#14 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#15 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#16 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#17 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#18 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(70): Illuminate\\View\\View->render()
+#19 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent()
+#20 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(920): Illuminate\\Http\\Response->__construct()
+#21 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(887): Illuminate\\Routing\\Router::toResponse()
+#22 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Routing\\Router->prepareResponse()
+#23 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#24 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(35): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Auth\\Middleware\\RedirectIfAuthenticated->handle()
+#26 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#28 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#29 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#30 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#31 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#32 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#33 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#34 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle()
+#35 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#37 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#39 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#41 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#42 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#43 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#44 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#45 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#46 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#47 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#48 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#49 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#51 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#52 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#53 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#54 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#55 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#56 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#57 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#58 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#59 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#60 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#61 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#62 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#63 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1188): Illuminate\\Foundation\\Http\\Kernel->handle()
+#64 /home/jay/Downloads/laravel/chatApplication/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#65 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#66 {main}
+
+[previous exception] [object] (Illuminate\\Foundation\\ViteManifestNotFoundException(code: 0): Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json at /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:727)
+[stacktrace]
+#0 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(292): Illuminate\\Foundation\\Vite->manifest()
+#1 /home/jay/Downloads/laravel/chatApplication/storage/framework/views/6d0d0296496f24d3e8ce61b31afe13d6.php(13): Illuminate\\Foundation\\Vite->__invoke()
+#2 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#3 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire()
+#5 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#6 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#7 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#8 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#9 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(99): Illuminate\\View\\View->render()
+#10 /home/jay/Downloads/laravel/chatApplication/storage/framework/views/0896e5ba2995e2a5d95e02bef611cb94.php(196): Illuminate\\View\\Factory->renderComponent()
+#11 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('...')
+#12 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#13 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire()
+#14 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath()
+#15 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get()
+#16 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#17 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#18 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(70): Illuminate\\View\\View->render()
+#19 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent()
+#20 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(920): Illuminate\\Http\\Response->__construct()
+#21 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(887): Illuminate\\Routing\\Router::toResponse()
+#22 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Routing\\Router->prepareResponse()
+#23 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#24 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(35): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Auth\\Middleware\\RedirectIfAuthenticated->handle()
+#26 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#27 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#28 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#29 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#30 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#31 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#32 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#33 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#34 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle()
+#35 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#37 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#38 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#39 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#40 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then()
+#41 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack()
+#42 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute()
+#43 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute()
+#44 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
+#45 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#46 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#47 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#48 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#49 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#51 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#52 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#53 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle()
+#54 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#55 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#56 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#57 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle()
+#58 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#59 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle()
+#60 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#61 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
+#62 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#63 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1188): Illuminate\\Foundation\\Http\\Kernel->handle()
+#64 /home/jay/Downloads/laravel/chatApplication/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest()
+#65 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#66 {main}
+"} 
+[2024-08-01 11:46:19] local.ERROR: Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json {"view":{"view":"/home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/layouts/guest.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1482502547 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#312</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1482502547\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","componentName":"<pre class=sf-dump id=sf-dump-2092320532 data-indent-pad=\"  \">\"<span class=sf-dump-str title=\"12 characters\">guest-layout</span>\"
+</pre><script>Sfdump(\"sf-dump-2092320532\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","attributes":"<pre class=sf-dump id=sf-dump-1251533651 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentAttributeBag</span> {<a class=sf-dump-ref>#339</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1251533651\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","ignoredParameterNames":"<pre class=sf-dump id=sf-dump-944061722 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\InvokableComponentVariable</span> {<a class=sf-dump-ref>#352</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">callable</span>: <span class=sf-dump-note>Closure()</span> {<a class=sf-dump-ref>#351</a><samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-meta>class</span>: \"<span class=sf-dump-str title=\"App\\View\\Components\\GuestLayout
+31 characters\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-class\">App\\View\\Components</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-class\">\\</span>GuestLayout</span>\"
+    <span class=sf-dump-meta>this</span>: <span class=sf-dump-note title=\"App\\View\\Components\\GuestLayout
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">App\\View\\Components</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>GuestLayout</span> {<a class=sf-dump-ref>#337</a> &#8230;}
+    <span class=sf-dump-meta>use</span>: {<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-meta>$method</span>: \"<span class=sf-dump-str title=\"21 characters\">ignoredParameterNames</span>\"
+    </samp>}
+    <span class=sf-dump-meta>file</span>: \"<span class=sf-dump-str title=\"/home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Component.php
+102 characters\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/home/jay/Downloads/laravel/chatApplication/vendor</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-path\">/laravel/framework/</span>src/Illuminate/View/Component.php</span>\"
+    <span class=sf-dump-meta>line</span>: \"<span class=sf-dump-str title=\"10 characters\">311 to 313</span>\"
+  </samp>}
+</samp>}
+</pre><script>Sfdump(\"sf-dump-944061722\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","slot":"<pre class=sf-dump id=sf-dump-595679212 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentSlot</span> {<a class=sf-dump-ref>#343</a><samp data-depth=1 class=sf-dump-expanded>
+  +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#356</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+  </samp>}
+  #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+    <span class=sf-dump-str title=\"6385 characters\">&lt;div class=&quot;flex flex-col items-center min-h-screen pt-6 bg-gray-100 sm:justify-center sm:pt-0&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">            &lt;a href=&quot;/&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;svg viewBox=&quot;0 0 316 316&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;w-20 h-20 text-gray-500 fill-current&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">    &lt;path d=&quot;M305.8 81.125C305.77 80.995 305.69 80.885 305.65 80.755C305.56 80.525 305.49 80.285 305.37 80.075C305.29 79.935 305.17 79.815 305.07 79.685C304.94 79.515 304.83 79.325 304.68 79.175C304.55 79.045 304.39 78.955 304.25 78.845C304.09 78.715 303.95 78.575 303.77 78.475L251.32 48.275C249.97 47.495 248.31 47.495 246.96 48.275L194.51 78.475C194.33 78.575 194.19 78.725 194.03 78.845C193.89 78.955 193.73 79.045 193.6 79.175C193.45 79.325 193.34 79.515 193.21 79.685C193.11 79.815 192.99 79.935 192.91 80.075C192.79 80.285 192.71 80.525 192.63 80.755C192.58 80.875 192.51 80.995 192.48 81.125C192.38 81.495 192.33 81.875 192.33 82.265V139.625L148.62 164.795V52.575C148.62 52.185 148.57 51.805 148.47 51.435C148.44 51.305 148.36 51.195 148.32 51.065C148.23 50.835 148.16 50.595 148.04 50.385C147.96 50.245 147.84 50.125 147.74 49.995C147.61 49.825 147.5 49.635 147.35 49.485C147.22 49.355 147.06 49.265 146.92 49.155C146.76 49.025 146.62 48.885 146.44 48.785L93.99 18.585C92.64 17.805 90.98 17.805 89.63 18.585L37.18 48.785C37 48.885 36.86 49.035 36.7 49.155C36.56 49.265 36.4 49.355 36.27 49.485C36.12 49.635 36.01 49.825 35.88 49.995C35.78 50.125 35.66 50.245 35.58 50.385C35.46 50.595 35.38 50.835 35.3 51.065C35.25 51.185 35.18 51.305 35.15 51.435C35.05 51.805 35 52.185 35 52.575V232.235C35 233.795 35.84 235.245 37.19 236.025L142.1 296.425C142.33 296.555 142.58 296.635 142.82 296.725C142.93 296.765 143.04 296.835 143.16 296.865C143.53 296.965 143.9 297.015 144.28 297.015C144.66 297.015 145.03 296.965 145.4 296.865C145.5 296.835 145.59 296.775 145.69 296.745C145.95 296.655 146.21 296.565 146.45 296.435L251.36 236.035C252.72 235.255 253.55 233.815 253.55 232.245V174.885L303.81 145.945C305.17 145.165 306 143.725 306 142.155V82.265C305.95 81.875 305.89 81.495 305.8 81.125ZM144.2 227.205L100.57 202.515L146.39 176.135L196.66 147.195L240.33 172.335L208.29 190.625L144.2 227.205ZM244.75 114.995V164.795L226.39 154.225L201.03 139.625V89.825L219.39 100.395L244.75 114.995ZM249.12 57.105L292.81 82.265L249.12 107.425L205.43 82.265L249.12 57.105ZM114.49 184.425L96.13 194.995V85.305L121.49 70.705L139.85 60.135V169.815L114.49 184.425ZM91.76 27.425L135.45 52.585L91.76 77.745L48.07 52.585L91.76 27.425ZM43.67 60.135L62.03 70.705L87.39 85.305V202.545V202.555V202.565C87.39 202.735 87.44 202.895 87.46 203.055C87.49 203.265 87.49 203.485 87.55 203.695V203.705C87.6 203.875 87.69 204.035 87.76 204.195C87.84 204.375 87.89 204.575 87.99 204.745C87.99 204.745 87.99 204.755 88 204.755C88.09 204.905 88.22 205.035 88.33 205.175C88.45 205.335 88.55 205.495 88.69 205.635L88.7 205.645C88.82 205.765 88.98 205.855 89.12 205.965C89.28 206.085 89.42 206.225 89.59 206.325C89.6 206.325 89.6 206.325 89.61 206.335C89.62 206.335 89.62 206.345 89.63 206.345L139.87 234.775V285.065L43.67 229.705V60.135ZM244.75 229.705L148.58 285.075V234.775L219.8 194.115L244.75 179.875V229.705ZM297.2 139.625L253.49 164.795V114.995L278.85 100.395L297.21 89.825V139.625H297.2Z&quot;/&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">&lt;/svg&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">            &lt;/a&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">        &lt;div class=&quot;w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">            &lt;!-- Session Status --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">            <span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">            &lt;!-- Validation Errors --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">            <span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">            &lt;form method=&quot;POST&quot; action=&quot;http://192.168.0.116:8004/login&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;egbP1h7QXzuWycYP5cnuHLE0RGusLdcyInvQ8NCp&quot; autocomplete=&quot;off&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;!-- Role Dropdown --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;label class=&quot;block text-sm font-medium text-gray-700&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        Role<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;select id=&quot;role&quot; name=&quot;role&quot; class=&quot;form-select w-full &quot; required&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        &lt;option value=&quot;employee&quot; &gt;Employee&lt;/option&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        &lt;option value=&quot;guest&quot; &gt;Guest&lt;/option&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;/select&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;!-- Email Address --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;label class=&quot;block text-sm font-medium text-gray-700&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        Email<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;input id=&quot;email&quot; type=&quot;email&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                            class=&quot;form-input w-full &quot; name=&quot;email&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                            value=&quot;&quot; required autocomplete=&quot;email&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;!-- Password --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;label class=&quot;block text-sm font-medium text-gray-700&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;input id=&quot;password&quot; type=&quot;password&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                            class=&quot;form-input w-full  password-field&quot; name=&quot;password&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                            required autocomplete=&quot;new-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;!-- Remember Me --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;block mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;label for=&quot;remember_me&quot; class=&quot;inline-flex items-center&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        &lt;input id=&quot;remember_me&quot; type=&quot;checkbox&quot; class=&quot;text-indigo-600 border-gray-300 rounded shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50&quot; name=&quot;remember&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        &lt;span class=&quot;ml-2 text-sm text-gray-600&quot;&gt;Remember me&lt;/span&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;flex items-center justify-end mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                                            &lt;a class=&quot;text-sm text-gray-600 underline hover:text-gray-900&quot; href=&quot;http://192.168.0.116:8004/forgot-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                            Forgot your password?<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        &lt;/a&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    <span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 ml-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-md hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                        Log in<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                    &lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">            &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"6385 characters\">    &lt;/div&gt;</span>
+    \"\"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-595679212\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__laravel_slots":"<pre class=sf-dump id=sf-dump-1223536532 data-indent-pad=\"  \"><span class=sf-dump-note>array:1</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>__default</span>\" => <span class=sf-dump-note title=\"Illuminate\\View\\ComponentSlot
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentSlot</span> {<a class=sf-dump-ref>#343</a><samp data-depth=2 class=sf-dump-compact>
+    +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#356</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+    </samp>}
+    #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+      <span class=sf-dump-str title=\"6385 characters\">&lt;div class=&quot;flex flex-col items-center min-h-screen pt-6 bg-gray-100 sm:justify-center sm:pt-0&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">        &lt;div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">            &lt;a href=&quot;/&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;svg viewBox=&quot;0 0 316 316&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;w-20 h-20 text-gray-500 fill-current&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">    &lt;path d=&quot;M305.8 81.125C305.77 80.995 305.69 80.885 305.65 80.755C305.56 80.525 305.49 80.285 305.37 80.075C305.29 79.935 305.17 79.815 305.07 79.685C304.94 79.515 304.83 79.325 304.68 79.175C304.55 79.045 304.39 78.955 304.25 78.845C304.09 78.715 303.95 78.575 303.77 78.475L251.32 48.275C249.97 47.495 248.31 47.495 246.96 48.275L194.51 78.475C194.33 78.575 194.19 78.725 194.03 78.845C193.89 78.955 193.73 79.045 193.6 79.175C193.45 79.325 193.34 79.515 193.21 79.685C193.11 79.815 192.99 79.935 192.91 80.075C192.79 80.285 192.71 80.525 192.63 80.755C192.58 80.875 192.51 80.995 192.48 81.125C192.38 81.495 192.33 81.875 192.33 82.265V139.625L148.62 164.795V52.575C148.62 52.185 148.57 51.805 148.47 51.435C148.44 51.305 148.36 51.195 148.32 51.065C148.23 50.835 148.16 50.595 148.04 50.385C147.96 50.245 147.84 50.125 147.74 49.995C147.61 49.825 147.5 49.635 147.35 49.485C147.22 49.355 147.06 49.265 146.92 49.155C146.76 49.025 146.62 48.885 146.44 48.785L93.99 18.585C92.64 17.805 90.98 17.805 89.63 18.585L37.18 48.785C37 48.885 36.86 49.035 36.7 49.155C36.56 49.265 36.4 49.355 36.27 49.485C36.12 49.635 36.01 49.825 35.88 49.995C35.78 50.125 35.66 50.245 35.58 50.385C35.46 50.595 35.38 50.835 35.3 51.065C35.25 51.185 35.18 51.305 35.15 51.435C35.05 51.805 35 52.185 35 52.575V232.235C35 233.795 35.84 235.245 37.19 236.025L142.1 296.425C142.33 296.555 142.58 296.635 142.82 296.725C142.93 296.765 143.04 296.835 143.16 296.865C143.53 296.965 143.9 297.015 144.28 297.015C144.66 297.015 145.03 296.965 145.4 296.865C145.5 296.835 145.59 296.775 145.69 296.745C145.95 296.655 146.21 296.565 146.45 296.435L251.36 236.035C252.72 235.255 253.55 233.815 253.55 232.245V174.885L303.81 145.945C305.17 145.165 306 143.725 306 142.155V82.265C305.95 81.875 305.89 81.495 305.8 81.125ZM144.2 227.205L100.57 202.515L146.39 176.135L196.66 147.195L240.33 172.335L208.29 190.625L144.2 227.205ZM244.75 114.995V164.795L226.39 154.225L201.03 139.625V89.825L219.39 100.395L244.75 114.995ZM249.12 57.105L292.81 82.265L249.12 107.425L205.43 82.265L249.12 57.105ZM114.49 184.425L96.13 194.995V85.305L121.49 70.705L139.85 60.135V169.815L114.49 184.425ZM91.76 27.425L135.45 52.585L91.76 77.745L48.07 52.585L91.76 27.425ZM43.67 60.135L62.03 70.705L87.39 85.305V202.545V202.555V202.565C87.39 202.735 87.44 202.895 87.46 203.055C87.49 203.265 87.49 203.485 87.55 203.695V203.705C87.6 203.875 87.69 204.035 87.76 204.195C87.84 204.375 87.89 204.575 87.99 204.745C87.99 204.745 87.99 204.755 88 204.755C88.09 204.905 88.22 205.035 88.33 205.175C88.45 205.335 88.55 205.495 88.69 205.635L88.7 205.645C88.82 205.765 88.98 205.855 89.12 205.965C89.28 206.085 89.42 206.225 89.59 206.325C89.6 206.325 89.6 206.325 89.61 206.335C89.62 206.335 89.62 206.345 89.63 206.345L139.87 234.775V285.065L43.67 229.705V60.135ZM244.75 229.705L148.58 285.075V234.775L219.8 194.115L244.75 179.875V229.705ZM297.2 139.625L253.49 164.795V114.995L278.85 100.395L297.21 89.825V139.625H297.2Z&quot;/&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">&lt;/svg&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">            &lt;/a&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">        &lt;div class=&quot;w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">            &lt;!-- Session Status --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">            <span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">            &lt;!-- Validation Errors --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">            <span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">            &lt;form method=&quot;POST&quot; action=&quot;http://192.168.0.116:8004/login&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;input type=&quot;hidden&quot; name=&quot;_token&quot; value=&quot;egbP1h7QXzuWycYP5cnuHLE0RGusLdcyInvQ8NCp&quot; autocomplete=&quot;off&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;!-- Role Dropdown --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;label class=&quot;block text-sm font-medium text-gray-700&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        Role<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;select id=&quot;role&quot; name=&quot;role&quot; class=&quot;form-select w-full &quot; required&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        &lt;option value=&quot;employee&quot; &gt;Employee&lt;/option&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        &lt;option value=&quot;guest&quot; &gt;Guest&lt;/option&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;/select&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;!-- Email Address --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;label class=&quot;block text-sm font-medium text-gray-700&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        Email<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;input id=&quot;email&quot; type=&quot;email&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                            class=&quot;form-input w-full &quot; name=&quot;email&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                            value=&quot;&quot; required autocomplete=&quot;email&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;!-- Password --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;label class=&quot;block text-sm font-medium text-gray-700&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        Password<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;input id=&quot;password&quot; type=&quot;password&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                            class=&quot;form-input w-full  password-field&quot; name=&quot;password&quot;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                            required autocomplete=&quot;new-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                                    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;!-- Remember Me --&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;block mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;label for=&quot;remember_me&quot; class=&quot;inline-flex items-center&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        &lt;input id=&quot;remember_me&quot; type=&quot;checkbox&quot; class=&quot;text-indigo-600 border-gray-300 rounded shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50&quot; name=&quot;remember&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        &lt;span class=&quot;ml-2 text-sm text-gray-600&quot;&gt;Remember me&lt;/span&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;/label&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;div class=&quot;flex items-center justify-end mt-4&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                                            &lt;a class=&quot;text-sm text-gray-600 underline hover:text-gray-900&quot; href=&quot;http://192.168.0.116:8004/forgot-password&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                            Forgot your password?<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        &lt;/a&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    <span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;button type=&quot;submit&quot; class=&quot;inline-flex items-center px-4 py-2 ml-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-gray-800 border border-transparent rounded-md hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                        Log in<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                    &lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">                &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">            &lt;/form&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"6385 characters\">    &lt;/div&gt;</span>
+      \"\"\"
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-1223536532\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json at /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:727)
+[stacktrace]
+#0 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(292): Illuminate\\Foundation\\Vite->manifest('tailwind')
+#1 /home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/layouts/guest.blade.php(13): Illuminate\\Foundation\\Vite->__invoke(Object(Illuminate\\Support\\Collection), 'tailwind')
+#2 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('/home/jay/Downl...')
+#3 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/home/jay/Downl...', Array)
+#5 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/home/jay/Downl...', Array)
+#6 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('/home/jay/Downl...', Array)
+#7 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#8 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#9 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(99): Illuminate\\View\\View->render()
+#10 /home/jay/Downloads/laravel/chatApplication/themes/tailwind/views/auth/login.blade.php(88): Illuminate\\View\\Factory->renderComponent()
+#11 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('/home/jay/Downl...')
+#12 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#13 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/home/jay/Downl...', Array)
+#14 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/home/jay/Downl...', Array)
+#15 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('/home/jay/Downl...', Array)
+#16 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#17 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#18 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(70): Illuminate\\View\\View->render()
+#19 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#20 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(920): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#21 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(887): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#22 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#23 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(35): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Auth\\Middleware\\RedirectIfAuthenticated->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#34 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#41 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#42 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#43 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#44 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#45 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1188): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 /home/jay/Downloads/laravel/chatApplication/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#65 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('/home/jay/Downl...')
+#66 {main}
+
+[previous exception] [object] (Illuminate\\Foundation\\ViteManifestNotFoundException(code: 0): Vite manifest not found at: /home/jay/Downloads/laravel/chatApplication/public/tailwind/manifest.json at /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:727)
+[stacktrace]
+#0 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Vite.php(292): Illuminate\\Foundation\\Vite->manifest('tailwind')
+#1 /home/jay/Downloads/laravel/chatApplication/storage/framework/views/6d0d0296496f24d3e8ce61b31afe13d6.php(13): Illuminate\\Foundation\\Vite->__invoke(Object(Illuminate\\Support\\Collection), 'tailwind')
+#2 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('/home/jay/Downl...')
+#3 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/home/jay/Downl...', Array)
+#5 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/home/jay/Downl...', Array)
+#6 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('/home/jay/Downl...', Array)
+#7 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#8 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#9 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(99): Illuminate\\View\\View->render()
+#10 /home/jay/Downloads/laravel/chatApplication/storage/framework/views/fa8f51dda48af3805bd0f919766fbeed.php(212): Illuminate\\View\\Factory->renderComponent()
+#11 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(123): require('/home/jay/Downl...')
+#12 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#13 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/home/jay/Downl...', Array)
+#14 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(73): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/home/jay/Downl...', Array)
+#15 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('/home/jay/Downl...', Array)
+#16 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(191): Illuminate\\View\\View->getContents()
+#17 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/View.php(160): Illuminate\\View\\View->renderContents()
+#18 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(70): Illuminate\\View\\View->render()
+#19 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#20 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(920): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#21 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(887): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#22 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#23 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Auth/Middleware/RedirectIfAuthenticated.php(35): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Auth\\Middleware\\RedirectIfAuthenticated->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(88): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#34 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(75): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#41 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#42 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#43 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#44 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#45 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1188): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 /home/jay/Downloads/laravel/chatApplication/public/index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#65 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('/home/jay/Downl...')
+#66 {main}
+"} 
+[2024-08-05 06:57:44] local.ERROR: SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel:reverb:restart)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (laravel:reverb:restart)) at /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php:813)
+[stacktrace]
+#0 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(967): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(946): Illuminate\\Database\\Connection->tryAgainIfCausedByLostConnection(Object(Illuminate\\Database\\QueryException), 'select * from `...', Array, Object(Closure))
+#2 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(769): Illuminate\\Database\\Connection->handleQueryException(Object(Illuminate\\Database\\QueryException), 'select * from `...', Array, Object(Closure))
+#3 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(398): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#4 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3061): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#5 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3046): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3634): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3045): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cache/DatabaseStore.php(127): Illuminate\\Database\\Query\\Builder->get()
+#9 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cache/DatabaseStore.php(102): Illuminate\\Cache\\DatabaseStore->many(Array)
+#10 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cache/Repository.php(116): Illuminate\\Cache\\DatabaseStore->get('laravel:reverb:...')
+#11 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cache/CacheManager.php(440): Illuminate\\Cache\\Repository->get('laravel:reverb:...')
+#12 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(357): Illuminate\\Cache\\CacheManager->__call('get', Array)
+#13 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/reverb/src/Servers/Reverb/Console/Commands/StartServer.php(104): Illuminate\\Support\\Facades\\Facade::__callStatic('get', Array)
+#14 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/reverb/src/Servers/Reverb/Console/Commands/StartServer.php(68): Laravel\\Reverb\\Servers\\Reverb\\Console\\Commands\\StartServer->ensureRestartCommandIsRespected(Object(Laravel\\Reverb\\Servers\\Reverb\\Http\\Server), Object(React\\EventLoop\\StreamSelectLoop), '192.168.0.116', '8081')
+#15 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Laravel\\Reverb\\Servers\\Reverb\\Console\\Commands\\StartServer->handle()
+#16 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/Container.php(690): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call(Array)
+#21 /home/jay/Downloads/laravel/chatApplication/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /home/jay/Downloads/laravel/chatApplication/vendor/symfony/console/Application.php(1047): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /home/jay/Downloads/laravel/chatApplication/vendor/symfony/console/Application.php(316): Symfony\\Component\\Console\\Application->doRunCommand(Object(Laravel\\Reverb\\Servers\\Reverb\\Console\\Commands\\StartServer), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /home/jay/Downloads/laravel/chatApplication/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /home/jay/Downloads/laravel/chatApplication/artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 2002): SQLSTATE[HY000] [2002] Connection refused at /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:65)
+[stacktrace]
+#0 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(65): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(83): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(48): Illuminate\\Database\\Connectors\\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'mysql:host=127....', 'root', '', Array)
+#3 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#4 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(185): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#5 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#6 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1219): call_user_func(Object(Closure))
+#7 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1255): Illuminate\\Database\\Connection->getPdo()
+#8 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(512): Illuminate\\Database\\Connection->getReadPdo()
+#9 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(407): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#10 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(800): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#11 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(967): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#12 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(946): Illuminate\\Database\\Connection->tryAgainIfCausedByLostConnection(Object(Illuminate\\Database\\QueryException), 'select * from `...', Array, Object(Closure))
+#13 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(769): Illuminate\\Database\\Connection->handleQueryException(Object(Illuminate\\Database\\QueryException), 'select * from `...', Array, Object(Closure))
+#14 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Connection.php(398): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#15 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3061): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#16 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3046): Illuminate\\Database\\Query\\Builder->runSelect()
+#17 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3634): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#18 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3045): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#19 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cache/DatabaseStore.php(127): Illuminate\\Database\\Query\\Builder->get()
+#20 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cache/DatabaseStore.php(102): Illuminate\\Cache\\DatabaseStore->many(Array)
+#21 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cache/Repository.php(116): Illuminate\\Cache\\DatabaseStore->get('laravel:reverb:...')
+#22 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Cache/CacheManager.php(440): Illuminate\\Cache\\Repository->get('laravel:reverb:...')
+#23 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(357): Illuminate\\Cache\\CacheManager->__call('get', Array)
+#24 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/reverb/src/Servers/Reverb/Console/Commands/StartServer.php(104): Illuminate\\Support\\Facades\\Facade::__callStatic('get', Array)
+#25 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/reverb/src/Servers/Reverb/Console/Commands/StartServer.php(68): Laravel\\Reverb\\Servers\\Reverb\\Console\\Commands\\StartServer->ensureRestartCommandIsRespected(Object(Laravel\\Reverb\\Servers\\Reverb\\Http\\Server), Object(React\\EventLoop\\StreamSelectLoop), '192.168.0.116', '8081')
+#26 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Laravel\\Reverb\\Servers\\Reverb\\Console\\Commands\\StartServer->handle()
+#27 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#29 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#30 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Container/Container.php(690): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#31 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call(Array)
+#32 /home/jay/Downloads/laravel/chatApplication/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#33 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#34 /home/jay/Downloads/laravel/chatApplication/vendor/symfony/console/Application.php(1047): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /home/jay/Downloads/laravel/chatApplication/vendor/symfony/console/Application.php(316): Symfony\\Component\\Console\\Application->doRunCommand(Object(Laravel\\Reverb\\Servers\\Reverb\\Console\\Commands\\StartServer), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /home/jay/Downloads/laravel/chatApplication/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 /home/jay/Downloads/laravel/chatApplication/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 /home/jay/Downloads/laravel/chatApplication/artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#40 {main}
+"} 
